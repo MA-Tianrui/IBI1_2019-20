@@ -6,7 +6,7 @@ C = 4
 G = 5
 T = 6
 #found a dictionary
-FrequencyOfNucleotides = {'A':6, 'C':4, 'G':5, 'T':6}
+FrequencyOfNucleotides = {'A':A, 'C':C, 'G':G, 'T':T}
 #set the argument of the plot
 labels = FrequencyOfNucleotides.keys()
 sizes = FrequencyOfNucleotides.values()
