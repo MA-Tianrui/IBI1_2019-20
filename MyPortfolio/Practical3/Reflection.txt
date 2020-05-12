@@ -1,0 +1,2 @@
+This practical is be finished smoothly and all steps go well without difficulty.
+However, I have a question. The project showed in GitKraken is in a form like a list of log, but I find it is a bit confusing when there are many branches in a project. How can I change the form into a tree diagram? 
