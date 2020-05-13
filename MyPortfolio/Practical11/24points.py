@@ -85,3 +85,7 @@ if get24 == False:
 
 # this number of times is the worst situation
 print('Times:', n)
+
+
+# when N=2, n=6; N=3, n=216; N=4, n=11664; N=5, n=933120
+# so I think it is an algorithm with low efficacy
