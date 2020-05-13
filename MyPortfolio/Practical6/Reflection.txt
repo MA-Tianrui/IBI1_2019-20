@@ -1,0 +1,1 @@
+Counting the nucleotides and sorting the list is easy. Using matplotlib to draw the plot is not easy. There are many parameters in the function of matplotlib. To understand how these parameters work, I read the tutorial in the website of matplotlib. Reading tutorial is a good way to learn a new module quickly.
