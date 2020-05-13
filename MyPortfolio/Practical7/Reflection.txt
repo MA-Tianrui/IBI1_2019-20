@@ -1,0 +1,1 @@
+I learn what is dataframe and how to get data from dataframe in this Practical. However, drawing plot is also hard like in Practical6. I should spend more time in the abundant content of matplotlib.
