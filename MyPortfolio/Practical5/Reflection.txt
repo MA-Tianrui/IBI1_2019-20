@@ -1,0 +1,1 @@
+There is not problem when I am writing most of codes. However, working with booleans is confusing. I think I should remember that booleans are also a type. So we can make expression with booleans and can assign booleans to a variable.
