@@ -1,0 +1,1 @@
+It is hard to find out how to use BLOSUM matrix to compare sequences from a txt file. So I recall the Practical8 to get some ideas. I think my way to get BLOSUM matrix in code is good enough. Working in other parts is finished smoothly.
