@@ -1,0 +1,1 @@
+The code which reverses complementary sequence is made smoothly. I learned how to operate the file in this Practical. In get_mito_gene.py, I read a file, extract some data from it and put data into a new file. I think a long time and give a great method to finish it. I do all these works in a single for loop.
