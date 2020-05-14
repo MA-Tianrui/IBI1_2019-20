@@ -1,0 +1,1 @@
+Simulating with SIR model is easy. However, doing this spatially is different. I learn how to draw heatmap in matplotlib and also learn some knowledge about colormap. I try many kinds of colormap to fill my heatmap and I choose 'plasma' finally. I refer the code which is given by instructor to find the susceptible surrounding the infected.
