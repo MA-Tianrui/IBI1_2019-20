@@ -2,6 +2,10 @@ import re
 
 #define the content in RC.py as a function
 def RC(seq):
+    """
+    input: a sequence of DNA, a string
+    return: complementary sequence of the DNA, a string
+    """
 # base complementary pairing
     baseDict = {'A':'T', 'G':'C', 'C':'G', 'T':'A'}
 
