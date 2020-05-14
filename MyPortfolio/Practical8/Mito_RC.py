@@ -1,3 +1,5 @@
+import re
+
 #define the content in RC.py as a function
 def RC(seq):
 # base complementary pairing
@@ -11,14 +13,13 @@ def RC(seq):
         compleBase = baseDict[seq[i]]
         reCompleSeq += compleBase
 
-# print the sequence
+# return the sequence
     return(reCompleSeq)
 
-import re
+
 
 # input file name
 newFile = input('Enter a filename as the new fasta file (end with .fa):')
-
 # open and read the original file
 allGene = open('Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa')
 # creat a new file and prepare to write data into it
@@ -29,15 +30,17 @@ geneName = '' # not necessary, just used to prevent some potential problems
 geneSeq = ''
 geneLength= 0
 
+
+
 for line in allGene:
-    if line.startswith('>'):
+    if line.startswith('>'):  # find the beginning of a gene
 # write the data into the new file when the length > 0 (mean that the former gene is what we need)
         if geneLength > 0:
-            seqName = '>' + geneName[0] + ' ' + str(geneLength) + '\n'
+            seqName = '>' + geneName[0] + ' ' + str(geneLength) + '\n'  # combine gene name and length
             mitoGene.write(seqName)
-            reGeneSeq = RC(geneSeq)
+            reGeneSeq = RC(geneSeq)  # get complementary sequence
             mitoGene.write(reGeneSeq + '\n')
-            geneSeq = ''
+            geneSeq = ''  # reset the seq and length
             geneLength= 0
 # find Mito gene
         if re.search(r':Mito:', line):
@@ -48,9 +51,18 @@ for line in allGene:
             findIt = False
 # get the sequence and calculate the length of the gene we need
     elif findIt:
-        geneSeq += line[:-1]
-        geneLength += len(line) - 1
+        geneSeq += line[:-1]  # extract gene seq
+        geneLength += len(line) - 1  # calculate gene length
 
 # close the files
 allGene.close()
 mitoGene.close()
+
+
+
+# show the new fa file
+mitoGene_test = open(newFile)
+for line in mitoGene_test:
+    print(line[:-1])
+
+mitoGene_test.close()

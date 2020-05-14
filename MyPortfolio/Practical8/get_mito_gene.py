@@ -10,15 +10,17 @@ geneName = ''
 geneSeq = ''
 geneLength= 0
 
+
+
 for line in allGene:
-    if line.startswith('>'):
+    if line.startswith('>'):  # find the beginning of a gene
 # write the data into the new file when the length > 0 (mean that the former gene is what we need)
         if geneLength > 0:
-            seqName = '>' + geneName[0] + ' ' + str(geneLength) + '\n'
+            seqName = '>' + geneName[0] + ' ' + str(geneLength) + '\n'  # combine gene name and length
             mitoGene.write(seqName)
             mitoGene.write(geneSeq + '\n')
-            geneSeq = ''
-            geneLength= 0
+            geneSeq = ''  # reset the seq and length
+            geneLength = 0
 # find Mito gene
         if re.search(r':Mito:', line):
 # extract the gene name
@@ -28,9 +30,20 @@ for line in allGene:
             findIt = False
 # get the sequence and calculate the length of the gene we need
     elif findIt:
-        geneSeq += line[:-1]
-        geneLength += len(line) - 1
+        geneSeq += line[:-1]  # extract gene seq
+        geneLength += len(line) - 1  # calculate gene length
+
+
 
 # close the files
 allGene.close()
 mitoGene.close()
+
+
+
+# show the mito_gene.fa
+mitoGene_test = open('mito_gene.fa')
+for line in mitoGene_test:
+    print(line[:-1])
+
+mitoGene_test.close()
