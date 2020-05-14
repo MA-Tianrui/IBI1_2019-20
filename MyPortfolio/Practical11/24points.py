@@ -2,7 +2,6 @@ import sys
 
 # input a group of numbers and check if they fulfill the criteria
 ori = input("Please input numbers to compute 24 (use ',' to divide them): ")
-
 num = []
 num_str = ori.split(',')
 for i in num_str:
@@ -13,6 +12,7 @@ for i in num_str:
         sys.exit(0)
 
 
+
 # get all the sitution and put them into one list
 def cal(l):
    rl = []
@@ -21,17 +21,14 @@ def cal(l):
           for k in range(6):
              rl.append([i, j, k])
    return rl
-   
 
 sc = [[], []]
 for i in range(2, len(num) + 1):
    sc.append(cal(i))
 
-
 sci = []
 for i in range(len(num)):
    sci.append(sc[len(num) - i])
-
 
 allSit = []
 def select_copy(l):
@@ -44,6 +41,7 @@ def select_copy(l):
       l.pop()
    
 select_copy([])
+
 
 
 # try all the calculation way between two number
@@ -68,7 +66,9 @@ def op(i, j, k, l):
         l[i] = value
         l.pop(j)
         return 0
-    
+
+
+
 # find if 24 can be got in every situation and calculate the repeat times
 get24 = False
 n = 0
@@ -85,6 +85,7 @@ if get24 == False:
 
 # this number of times is the worst situation
 print('Times:', n)
+
 
 
 # when N=2, n=6; N=3, n=216; N=4, n=11664; N=5, n=933120
