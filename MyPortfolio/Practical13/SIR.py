@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 susceptibleRecord = [9999]
 infectedRecord = [1]
 recoveredRecord = [0]
-
 susceptible = 9999
 infected = 1
 recovered = 0
@@ -13,13 +12,15 @@ total = 10000
 beta = 0.3
 gamma = 0.05
 
-# loop over 1000 time points
 
+
+# loop over 1000 time points
 for timePoint in range(1, 1001):
-# new infected from susceptible
+# choose new infected from susceptible
     newInfected = np.random.choice(range(2), susceptible, p = [1 - beta*infected/total, beta*infected/total])
-# new recovered from infected
+# choose new recovered from infected
     newRecovered = np.random.choice(range(2), infected, p = [1 - gamma, gamma])
+# total number of new infected and recovered
     newInfectedNum = newInfected.sum()
     newRecoveredNum = newRecovered.sum()
 # count the number of three groups at the end of this time point
@@ -31,12 +32,15 @@ for timePoint in range(1, 1001):
     infectedRecord.append(infected)
     recoveredRecord.append(recovered)
 
-# draw the plot
+
+
+# change type
 susceptibleArray = np.array(susceptibleRecord)
 infectedArray = np.array(infectedRecord)
 recoveredArray = np.array(recoveredRecord)
 timeArray = np.array(range(0, 1001))
 
+# draw plot
 plt.figure(figsize = (6, 4), dpi = 150)
 plt.plot(timeArray, susceptibleArray, label = 'susceptible')
 plt.plot(timeArray, infectedArray, label = 'infected')
