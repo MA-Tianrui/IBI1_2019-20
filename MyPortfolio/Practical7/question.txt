@@ -1,6 +1,6 @@
 The pandemic outbreak of COVID-19 began almost simultaneously in South Korea and Iran but they took different measures with different effect. How have new cases developed over time in in South Korea and Iran?
 
 
-Line number in code: 
+Line number in code: 90-104
 
 Discussion: The new cases in South Korea is controlled in a low level after reaching a peak while the new cases in Iran increased faster and faster as of March 31. It is same with my expectation. In my opinion, the reason why the data  might look the way it does is that South Korea took some effective measures to control the spreading of the diease such as tracking source of infection and quarantine.
