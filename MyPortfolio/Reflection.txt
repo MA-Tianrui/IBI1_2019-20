@@ -1,0 +1,3 @@
+It is the general reflective report for IBI in this semester.
+
+In the IBI course in this semester, I have learned the basic knowledge of computer science, such as computer system and operating system. I have learned how to write a simple code in Python and how to use version control software (git) to progress my code works. I have learned to basically use some Python modules, such as matplotlib, numpy and regular expression. I practised these knowledge in the Practical of this course. By finish these task in Practical, the knowledge I got from lecture was consolidated.
